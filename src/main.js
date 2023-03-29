@@ -1,4 +1,4 @@
-const basePath = process.env.SERVER_URL;
+const basePath = process.env.FILES_URL;
 const { NETWORK } = require(`${basePath}/constants/network.js`);
 const fs = require("fs");
 const sha1 = require(`${basePath}/node_modules/sha1`);
