@@ -1,6 +1,6 @@
 const multer = require("multer");
 const mime = require("mime");
-const basePath = process.cwd();
+const basePath = process.env.SERVER_URL;
 const layersDir = `${basePath}/layers`;
 
 const fileFilter = (req, file, cb, err) => {
