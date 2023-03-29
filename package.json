@@ -1,10 +1,10 @@
 {
-  "name": "hashlips_art_engine",
+  "name": "nft_bloom",
   "version": "1.1.1",
   "description": "HashLips Art Engine is a tool used to create multiple different instances of artworks based on provided layers.",
   "main": "index.js",
   "bin": {
-    "hashlips_art_engine": "index.js"
+    "nft_bloom": "index.js"
   },
   "pkg": {
     "assets": [

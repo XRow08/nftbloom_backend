@@ -28,6 +28,6 @@ app.get("/", (req, res) =>
 // Server
 server.listen(process.env.PORT | 3001, () => {
   console.log(
-    `NFT Bloom SERVER listening at http://localhost:${process.env.PORT} ENV: ${process.env.ENVIROMENT}`
+    `NFT Bloom SERVER listening at ${process.env.DATABASE_URL} ENV: ${process.env.ENVIROMENT}`
   );
 });
