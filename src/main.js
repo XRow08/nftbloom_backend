@@ -53,11 +53,11 @@ const createCategoryLayer = (data) => {
     return Promise.resolve(401);
   }
   if (fs.existsSync(`${layersDir}/${id}`)) {
-    fs.mkdirSync(`${layersDir}/${id}/${name}`);
+    fs.mkdirSync(`${layersDir}/${id}/${name}`, { recursive: true });
   } else {
-    fs.mkdirSync(`${layersDir}/${id}`);
-    fs.mkdirSync(`${layersDir}/${id}/Background`);
-    fs.mkdirSync(`${layersDir}/${id}/${name}`);
+    fs.mkdirSync(`${layersDir}/${id}`, { recursive: true });
+    fs.mkdirSync(`${layersDir}/${id}/Background`, { recursive: true });
+    fs.mkdirSync(`${layersDir}/${id}/${name}`, { recursive: true });
   }
 
   return Promise.resolve(200);
@@ -109,7 +109,7 @@ const findAllLayers = (data) => {
   const objs = ls.map((name) => {
     return { id: name, name: name };
   });
-  
+
   return Promise.resolve(objs);
 };
 
