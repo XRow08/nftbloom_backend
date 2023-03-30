@@ -1,4 +1,4 @@
-const basePath = process.env.FILES_URL;
+const basePath = process.cwd();
 const { NETWORK } = require(`${basePath}/constants/network.js`);
 const fs = require("fs");
 const sha1 = require(`${basePath}/node_modules/sha1`);
@@ -124,7 +124,7 @@ const findImages = (data) => {
   const ls = fs.readdirSync(`${layersDir}/${id}/${name}`);
   const names = [];
   ls.forEach((e) => {
-    e = `${process.env.SERVER_URL}/layers/${id}/${name}/${e}`;
+    e = `${process.env.FILES_URL}/layers/${id}/${name}/${e}`;
     names.push(e);
   });
 
