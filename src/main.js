@@ -109,6 +109,7 @@ const findAllLayers = (data) => {
   const objs = ls.map((name) => {
     return { id: name, name: name };
   });
+  
   return Promise.resolve(objs);
 };
 

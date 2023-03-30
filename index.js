@@ -26,7 +26,7 @@ app.get("/", (req, res) =>
 );
 
 // Server
-server.listen(process.env.PORT | 3002, () => {
+server.listen(process.env.PORT | 3333, () => {
   console.log(
     `NFT Bloom SERVER listening at ${process.env.SERVER_URL} || ENV: ${process.env.ENVIROMENT}`
   );

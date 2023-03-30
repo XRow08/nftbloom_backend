@@ -4,7 +4,6 @@ const { storage, fileFilter } = require("../middlewares/uploadImg");
 const upload = multer({ storage, fileFilter }).single("image");
 const {
   startCreating,
-  buildSetup,
   createCategoryLayer,
   deleteCategoryLayer,
   findAllLayers,
@@ -31,6 +30,7 @@ router.post("/delete-layer", async (req, res) => {
 });
 
 router.get("/get-layers/:id", async (req, res) => {
+  console.log('conectado')
   findAllLayers(req.params.id)
     .then((response) => res.json(response))
     .catch((err) => res.status(500).send(err));
